@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(56, 56, 56);
+    color:hsl(36, 100%, 84%);
+}
+#root {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 4;
+}
+button {
+    border-radius: .5vw;
+}
