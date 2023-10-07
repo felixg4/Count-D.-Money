@@ -7,28 +7,22 @@
     <title>Money Counter</title>
 </head>
 <body>
-    <div id="root">
-        <div id="p">
+    <span id="root">
+        <div class="grid-even-columns">
             <button onclick="addCoin('p', -1)">-</button>
             <span>Pennies</span>
             <button onclick="addCoin('p', 1)">+</button>
-        </div>
-        <div id="n">
             <button onclick="addCoin('n', -1)">-</button>
             <span>Nickels</span>
             <button onclick="addCoin('n', 1)">+</button>
-        </div>
-        <div id="d">
             <button onclick="addCoin('d', -1)">-</button>
             <span>Dimes</span>
             <button onclick="addCoin('d', 1)">+</button>
-        </div>
-        <div id="q">
             <button onclick="addCoin('q', -1)">-</button>
             <span>Quarters</span>
             <button onclick="addCoin('q', 1)">+</button>
+            <div id="sum">$0.00</div>
         </div>
-    </div>
-    <div id="sum">$0.00</div>
+    </span>
 </body>
 </html>

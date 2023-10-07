@@ -1,12 +1,31 @@
+* {
+    font-size: 2.9vmax;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
     background-color: rgb(56, 56, 56);
     color:hsl(36, 100%, 84%);
 }
 #root {
+    display: flex;
+    flex-direction: column;
+}
+.grid-even-columns {
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 4;
+    gap: 1rem;
+    grid-template-columns: repeat(3, max-content);
+    text-align: center;
+    justify-self: center;
+    align-self: center;
 }
 button {
-    border-radius: .5vw;
+    border-radius: 7px;
+    padding: .3rem
+}
+#sum {
+    grid-column: span 3;
+}
+#error {
+    color: rgb(255, 83, 83);
+    text-transform: uppercase;
 }
