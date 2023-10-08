@@ -9,19 +9,25 @@
 <body>
     <span id="root">
         <div class="grid-even-columns">
-            <button onclick="addCoin('p', -1)">-</button>
-            <span>Pennies</span>
-            <button onclick="addCoin('p', 1)">+</button>
-            <button onclick="addCoin('n', -1)">-</button>
-            <span>Nickels</span>
-            <button onclick="addCoin('n', 1)">+</button>
-            <button onclick="addCoin('d', -1)">-</button>
-            <span>Dimes</span>
-            <button onclick="addCoin('d', 1)">+</button>
-            <button onclick="addCoin('q', -1)">-</button>
-            <span>Quarters</span>
-            <button onclick="addCoin('q', 1)">+</button>
+            <button onclick="addCoin(0, -1)">-</button>
+            <input type="number" min="0" value="0" onchange="changeCoins(0)" id="penny-count"> 
+            <span>Pennies: $0.00</span>
+            <button onclick="addCoin(0, 1)">+</button>
+            <button onclick="addCoin(1, -1)">-</button>
+            <input type="number" min="0" value="0" onchange="changeCoins(1)" id="nickel-count">
+            <span>Nickels: $0.00</span>
+            <button onclick="addCoin(1, 1)">+</button>
+            <button onclick="addCoin(2, -1)">-</button>
+            <input type="number" min="0" value="0" onchange="changeCoins(2)" id="dime-count">
+            <span>Dimes: $0.00</span>
+            <button onclick="addCoin(2, 1)">+</button>
+            <button onclick="addCoin(3, -1)">-</button>
+            <input type="number" min="0" value="0" onchange="changeCoins(3)" id="quarter-count">
+            <span>Quarters: $0.00</span>
+            <button onclick="addCoin(3, 1)">+</button>
+            <button onclick="clearCoins(-1)">Clear</button>
             <div id="sum">$0.00</div>
+            <button onclick="clearCoins(1)">Double</button>
         </div>
     </span>
 </body>

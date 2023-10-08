@@ -13,19 +13,24 @@ body {
 .grid-even-columns {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
     text-align: center;
     justify-self: center;
     align-self: center;
 }
 button {
     border-radius: 7px;
-    padding: .3rem
+    padding: .3ch
+}
+input {
+    width: 2ch
 }
 #sum {
-    grid-column: span 3;
+    grid-column: span 2;
 }
 #error {
-    color: rgb(255, 83, 83);
+    margin: 0;
+    grid-column: span 4;
+    color: rgb(252, 97, 97);
     text-transform: uppercase;
 }
