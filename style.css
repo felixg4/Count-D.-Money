@@ -1,6 +1,8 @@
 * {
-    font-size: 2.9vmax;
+    font-size: 2vmax;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1px;
+    text-align: center;
 }
 body {
     background-color: rgb(56, 56, 56);
@@ -10,20 +12,41 @@ body {
     display: flex;
     flex-direction: column;
 }
+h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+footer {
+    margin-top: 2px;
+    border-style: dashed;
+    animation: disappear 2s ease 5s 1 forwards;
+}
+@keyframes disappear {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: collapse;
+    }
+}
 .grid-even-columns {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(4, max-content);
-    text-align: center;
     justify-self: center;
     align-self: center;
+    justify-items: center;
 }
 button {
     border-radius: 7px;
-    padding: .3ch
+    padding: 0 3px;
+    width: max-content;
+    height: min-content;
 }
 input {
-    width: 2ch
+    width: 2ch;
+    border-radius: 10%;
 }
 #sum {
     grid-column: span 2;

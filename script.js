@@ -10,6 +10,7 @@ const coinDisplays = document.querySelectorAll('span')
 const errorMessage = document.createElement('p')
 let errorPresent = false
 errorMessage.id = "error"
+document.addEventListener('click', () => document.querySelector('footer')?.remove())
 function addCoin(coinType, multiplier, numCoins = 1) {
     if (errorPresent) {
         grid.removeChild(errorMessage)
@@ -36,5 +37,6 @@ function changeCoins(coinType) {
     addCoin(coinType, Math.abs(deltaCoins)/deltaCoins, Math.abs(deltaCoins))
 }
 function clearCoins(multiplier) {
+    if (multiplier == 0) multiplier = coinNumbers[coinNumbers.length - 1].value - 1
     for (let i = 0; i < 4; i++) addCoin(i, multiplier, coinCounts[i])
 }

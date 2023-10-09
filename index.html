@@ -8,6 +8,7 @@
 </head>
 <body>
     <span id="root">
+        <h1>Count your money!</h1>
         <div class="grid-even-columns">
             <button onclick="addCoin(0, -1)">-</button>
             <input type="number" min="0" value="0" onchange="changeCoins(0)" id="penny-count"> 
@@ -27,8 +28,9 @@
             <button onclick="addCoin(3, 1)">+</button>
             <button onclick="clearCoins(-1)">Clear</button>
             <div id="sum">$0.00</div>
-            <button onclick="clearCoins(1)">Double</button>
+            <span><button onclick="clearCoins(0)">Multiply x</button><input type="number" min="0" value="2" id="factor"></span>
         </div>
+        <footer>to add or subtract money, type in an amount and press enter, or press the + and - buttons. click anywhere to collapse this message.</footer>
     </span>
 </body>
 </html>
